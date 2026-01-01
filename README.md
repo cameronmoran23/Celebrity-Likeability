@@ -3,7 +3,7 @@
 End-to-end pipeline to pull celebrity-related news from the GDELT API, scrape article text, clean and delete duplicates from the data, load it into PostgreSQL, and perform sentiment analysis using an ensemble of Hugging Face, VADER, and TextBlob. Tableau can then be used to visualize trends over time. 
 
 ## Project Structure
-- [pipeline.py](pipeline.py): Orchestrates Extract -> Transform -> Load ([news extractor](Extract/news_extractor.py), [cleaner](Transform/transformer.py), [DB writer](Load/loader.py)).
+- [pipeline.py](pipeline.py): Orchestrates Extract -> Transform -> Load ([Extractor](Extract/news_extractor.py), [Transformer](Transform/transformer.py), [Loader](Load/loader.py)).
 - [Extract/news_extractor.py](Extract/news_extractor.py): Builds GDELT queries, fetches JSON, and scrapes article bodies.
 - [Transform/transformer.py](Transform/transformer.py): Cleans text, fills missing fields, and drops duplicates.
 - [Load/loader.py](Load/loader.py): Writes cleaned rows into PostgreSQL via SQLAlchemy.
